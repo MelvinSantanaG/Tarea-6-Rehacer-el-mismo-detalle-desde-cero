@@ -3,9 +3,9 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Tarea_6_Rehacer_el_mismo_detalle_desde_cero.DAL;
+using Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.DAL;
 
-namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero.Migrations
+namespace Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.Migrations
 {
     [DbContext(typeof(Contexto))]
     partial class ContextoModelSnapshot : ModelSnapshot
@@ -16,7 +16,7 @@ namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "5.0.4");
 
-            modelBuilder.Entity("Tarea_6_Rehacer_el_mismo_detalle_desde_cero.Entidades.Permisos", b =>
+            modelBuilder.Entity("Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.Entidades.Permisos", b =>
                 {
                     b.Property<int>("PermisoId")
                         .ValueGeneratedOnAdd()
@@ -59,7 +59,7 @@ namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Tarea_6_Rehacer_el_mismo_detalle_desde_cero.Entidades.Roles", b =>
+            modelBuilder.Entity("Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.Entidades.Roles", b =>
                 {
                     b.Property<int>("RolId")
                         .ValueGeneratedOnAdd()
@@ -76,7 +76,7 @@ namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero.Migrations
                     b.ToTable("Roles");
                 });
 
-            modelBuilder.Entity("Tarea_6_Rehacer_el_mismo_detalle_desde_cero.Entidades.RolesDetalle", b =>
+            modelBuilder.Entity("Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.Entidades.RolesDetalle", b =>
                 {
                     b.Property<int>("RolDetalleId")
                         .ValueGeneratedOnAdd()
@@ -100,27 +100,27 @@ namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero.Migrations
                     b.ToTable("RolesDetalles");
                 });
 
-            modelBuilder.Entity("Tarea_6_Rehacer_el_mismo_detalle_desde_cero.Entidades.RolesDetalle", b =>
+            modelBuilder.Entity("Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.Entidades.RolesDetalle", b =>
                 {
-                    b.HasOne("Tarea_6_Rehacer_el_mismo_detalle_desde_cero.Entidades.Permisos", null)
+                    b.HasOne("Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.Entidades.Permisos", null)
                         .WithMany("RolesDetalle")
                         .HasForeignKey("PermisoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Tarea_6_Rehacer_el_mismo_detalle_desde_cero.Entidades.Roles", null)
+                    b.HasOne("Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.Entidades.Roles", null)
                         .WithMany("RolesDetalle")
                         .HasForeignKey("RolId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Tarea_6_Rehacer_el_mismo_detalle_desde_cero.Entidades.Permisos", b =>
+            modelBuilder.Entity("Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.Entidades.Permisos", b =>
                 {
                     b.Navigation("RolesDetalle");
                 });
 
-            modelBuilder.Entity("Tarea_6_Rehacer_el_mismo_detalle_desde_cero.Entidades.Roles", b =>
+            modelBuilder.Entity("Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.Entidades.Roles", b =>
                 {
                     b.Navigation("RolesDetalle");
                 });

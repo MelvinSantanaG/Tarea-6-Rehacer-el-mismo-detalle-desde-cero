@@ -1,9 +1,9 @@
-﻿using Tarea_6_Rehacer_el_mismo_detalle_desde_cero.UI;
-using Tarea_6_Rehacer_el_mismo_detalle_desde_cero.UI.Consultas;
+﻿using Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.UI;
+using Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.UI.Consultas;
 using System;
 using System.Windows.Forms;
 
-namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero
+namespace Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero
 {
     public partial class MainForm : Form
     {
@@ -18,7 +18,7 @@ namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero
 
         private void RolesToolStripMenuItem_ItemClicked(object sender, EventArgs e)
         {
-            var Roles = new RegistroRoles();
+            var Roles = new rRoles();
             Roles.Show();
         }
 

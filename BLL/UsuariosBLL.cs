@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Tarea_6_Rehacer_el_mismo_detalle_desde_cero.DAL;
-using Tarea_6_Rehacer_el_mismo_detalle_desde_cero.Entidades;
+using Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.DAL;
+using Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero.BLL
+namespace Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.BLL
 {
     public class UsuariosBLL
     {

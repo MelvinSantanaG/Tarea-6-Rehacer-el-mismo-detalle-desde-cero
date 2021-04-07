@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero.Properties {
+namespace Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Tarea_6_Rehacer_el_mismo_detalle_desde_cero.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,9 +63,39 @@ namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap anadir {
+            get {
+                object obj = ResourceManager.GetObject("anadir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap botonx {
+            get {
+                object obj = ResourceManager.GetObject("botonx", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap eliminar {
             get {
                 object obj = ResourceManager.GetObject("eliminar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap guardar {
+            get {
+                object obj = ResourceManager.GetObject("guardar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +113,19 @@ namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap lupa {
+        internal static System.Drawing.Bitmap nuevo {
             get {
-                object obj = ResourceManager.GetObject("lupa", resourceCulture);
+                object obj = ResourceManager.GetObject("nuevo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search {
+            get {
+                object obj = ResourceManager.GetObject("search", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

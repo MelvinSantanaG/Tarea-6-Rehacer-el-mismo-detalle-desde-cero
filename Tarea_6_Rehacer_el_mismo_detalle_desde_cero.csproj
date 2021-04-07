@@ -8,11 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="microsoft.EntityFrameWorkCore.SQLITE" Version="5.0.4" />
-    <PackageReference Include="microsoft.EntityFrameWorkCore.Tools" Version="5.0.4">
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="microsoft.EntityFrameWorkCore.SQLITE" Version="6.0.0-preview.2.21154.2" />
+    <PackageReference Include="microsoft.EntityFrameWorkCore.Tools" Version="6.0.0-preview.2.21154.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.NETCore.Platforms" Version="6.0.0-preview.1.21102.12" />
+    <PackageReference Include="Microsoft.NETCore.Runtime.CoreCLR" Version="2.0.8" />
+    <PackageReference Include="runtime.any.System.Runtime.InteropServices" Version="4.3.0" />
+    <PackageReference Include="System.Runtime" Version="4.3.1" />
+    <PackageReference Include="System.Runtime.InteropServices" Version="4.3.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,6 +26,9 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="UI\Registro\rRoles.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
 

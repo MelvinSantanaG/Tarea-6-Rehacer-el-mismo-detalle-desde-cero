@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero.BLL
+namespace Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.BLL
 {
     public static class Utilitarios
     {

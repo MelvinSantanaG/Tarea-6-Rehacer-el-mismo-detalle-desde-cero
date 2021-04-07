@@ -1,10 +1,10 @@
-﻿using Tarea_6_Rehacer_el_mismo_detalle_desde_cero.BLL;
-using Tarea_6_Rehacer_el_mismo_detalle_desde_cero.Entidades;
+﻿using Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.BLL;
+using Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero.UI.Consultas
+namespace Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.UI.Consultas
 {
     public partial class cRoles : Form
     {
@@ -18,7 +18,7 @@ namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero.UI.Consultas
 
         }
 
-        private void BuscarButton_Click(object sender, EventArgs e)
+        private void BuscarRolButton_Click(object sender, EventArgs e)
         {
             var lista = new List<Roles>();
 
@@ -26,16 +26,16 @@ namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero.UI.Consultas
             {
                 if (TodosRadioButton.Checked)
                 {
-                    if (!String.IsNullOrWhiteSpace(CriterioTextBox.Text))
+                    if (!String.IsNullOrWhiteSpace(CriterioRolTextBox.Text))
                     {
-                        switch (FiltroComboBox.SelectedIndex)
+                        switch (FiltroRolComboBox.SelectedIndex)
                         {
                             case 0:
-                                lista = RolesBLL.GetList(r => r.RolId == Utilitarios.ToInt(CriterioTextBox.Text));
+                                lista = RolesBLL.GetList(r => r.RolId == Utilitarios.ToInt(CriterioRolTextBox.Text));
                                 break;
 
                             case 1:
-                                lista = RolesBLL.GetList(r => r.Descripcion.Contains(CriterioTextBox.Text));
+                                lista = RolesBLL.GetList(r => r.Descripcion.Contains(CriterioRolTextBox.Text));
                                 break;
 
                             default:
@@ -47,15 +47,15 @@ namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero.UI.Consultas
                 }
                 else if (ActivosRadioButton.Checked)
                 {
-                    if (!String.IsNullOrWhiteSpace(CriterioTextBox.Text))
+                    if (!String.IsNullOrWhiteSpace(CriterioRolTextBox.Text))
                     {
-                        switch (FiltroComboBox.SelectedIndex)
+                        switch (FiltroRolComboBox.SelectedIndex)
                         {
                             case 0:
-                                lista = RolesBLL.GetList(r => r.RolId == Utilitarios.ToInt(CriterioTextBox.Text) && r.EsActivo);
+                                lista = RolesBLL.GetList(r => r.RolId == Utilitarios.ToInt(CriterioRolTextBox.Text) && r.EsActivo);
                                 break;
                             case 1:
-                                lista = RolesBLL.GetList(r => r.Descripcion.Contains(CriterioTextBox.Text.ToUpper()) && r.EsActivo || r.Descripcion.Contains(CriterioTextBox.Text.ToLower()) && r.EsActivo);
+                                lista = RolesBLL.GetList(r => r.Descripcion.Contains(CriterioRolTextBox.Text.ToUpper()) && r.EsActivo || r.Descripcion.Contains(CriterioRolTextBox.Text.ToLower()) && r.EsActivo);
                                 break;
                             default:
                                 break;
@@ -66,15 +66,15 @@ namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero.UI.Consultas
                 }
                 else if (InactivosRadioButton.Checked)
                 {
-                    if (!String.IsNullOrWhiteSpace(CriterioTextBox.Text))
+                    if (!String.IsNullOrWhiteSpace(CriterioRolTextBox.Text))
                     {
-                        switch (FiltroComboBox.SelectedIndex)
+                        switch (FiltroRolComboBox.SelectedIndex)
                         {
                             case 0:
-                                lista = RolesBLL.GetList(r => r.RolId == Utilitarios.ToInt(CriterioTextBox.Text) && !r.EsActivo);
+                                lista = RolesBLL.GetList(r => r.RolId == Utilitarios.ToInt(CriterioRolTextBox.Text) && !r.EsActivo);
                                 break;
                             case 1:
-                                lista = RolesBLL.GetList(r => r.Descripcion.Contains(CriterioTextBox.Text.ToUpper()) && !r.EsActivo || r.Descripcion.Contains(CriterioTextBox.Text.ToLower()) && !r.EsActivo);
+                                lista = RolesBLL.GetList(r => r.Descripcion.Contains(CriterioRolTextBox.Text.ToUpper()) && !r.EsActivo || r.Descripcion.Contains(CriterioRolTextBox.Text.ToLower()) && !r.EsActivo);
                                 break;
                             default:
                                 break;
@@ -86,15 +86,15 @@ namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero.UI.Consultas
             }
             else
             {
-                if (!String.IsNullOrWhiteSpace(CriterioTextBox.Text))
+                if (!String.IsNullOrWhiteSpace(CriterioRolTextBox.Text))
                 {
-                    switch (FiltroComboBox.SelectedIndex)
+                    switch (FiltroRolComboBox.SelectedIndex)
                     {
                         case 0:
-                            lista = RolesBLL.GetList(r => r.RolId == Utilitarios.ToInt(CriterioTextBox.Text));
+                            lista = RolesBLL.GetList(r => r.RolId == Utilitarios.ToInt(CriterioRolTextBox.Text));
                             break;
                         case 1:
-                            lista = RolesBLL.GetList(r => r.Descripcion.Contains(CriterioTextBox.Text));
+                            lista = RolesBLL.GetList(r => r.Descripcion.Contains(CriterioRolTextBox.Text));
                             break;
                         default:
                             break;
@@ -104,19 +104,19 @@ namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero.UI.Consultas
                     lista = RolesBLL.GetList(r => true);
             }
 
-            if (FiltroFechaCheckBox.Checked)
+            if (FiltroFechaRolCheckBox.Checked)
             {
                 lista = RolesBLL.GetList(l => l.FechaCreacion >= DesdeDateTimePicker.Value && l.FechaCreacion <= HastaDateTimePicker.Value);
             }
 
             DetalleRolesDataGridView.DataSource = null;
             DetalleRolesDataGridView.DataSource = lista;
-        } //BuscarButton_Click
+        }
 
         private void FiltroActivoCheckBox_CheckedChanged(object sender, EventArgs e)
         {
-            if (FiltroActivoCheckBox.Checked)
-            {
+            if (FiltroActivoCheckBox.Checked) { 
+           
                 EsActivoGroupBox.Enabled = true;
             }
             else

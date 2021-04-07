@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using Tarea_6_Rehacer_el_mismo_detalle_desde_cero.BLL;
-using Tarea_6_Rehacer_el_mismo_detalle_desde_cero.Entidades;
+using Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.BLL;
+using Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.Entidades;
 
 
-namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero.UI
+namespace Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.UI
 {
-    public partial class RegistroRoles : Form
+    public partial class rRoles : Form
     {
         public List<RolesDetalle> rolesDetalles { get; set; }
 
-        public RegistroRoles()
+        public rRoles()
         {
             InitializeComponent();
             this.rolesDetalles = new List<RolesDetalle>();
@@ -38,7 +38,7 @@ namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero.UI
 
             if (DescripcionTextBox.Text == "")
             {
-                errorProvider.SetError(DescripcionTextBox, "Obligatorio");
+                RolesErrorProvider.SetError(DescripcionTextBox, "Obligatorio");
                 paso = false;
             }
 
@@ -139,7 +139,7 @@ namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero.UI
         private void EliminarButton_Click(object sender, EventArgs e)
         {
             int id = (int)IdRolNumericUpDown.Value;
-            errorProvider.Clear();
+            RolesErrorProvider.Clear();
 
             if (RolesBLL.Eliminar(id))
             {
@@ -147,7 +147,7 @@ namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero.UI
                 Limpiar();
             }
             else
-                errorProvider.SetError(IdRolNumericUpDown, "El id no existe");
+                RolesErrorProvider.SetError(IdRolNumericUpDown, "El id no existe");
         }       
 
         private void RegistroRoles_Load(object sender, EventArgs e)

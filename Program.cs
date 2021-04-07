@@ -1,10 +1,7 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero
+namespace Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero
 {
     static class Program
     {

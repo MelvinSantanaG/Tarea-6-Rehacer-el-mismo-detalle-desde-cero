@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Tarea_6_Rehacer_el_mismo_detalle_desde_cero.Entidades;
+using Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.Entidades;
 
-namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero.DAL
+namespace Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.DAL
 {
     public class Contexto : DbContext
     {

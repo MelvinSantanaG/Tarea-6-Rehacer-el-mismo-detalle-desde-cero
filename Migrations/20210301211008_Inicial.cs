@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Tarea_6_Rehacer_el_mismo_detalle_desde_cero.Migrations
+namespace Tarea_6_Rehacer_El_Mismo_Detalle_Desde_Cero.Migrations
 {
     public partial class Inicial : Migration
     {
